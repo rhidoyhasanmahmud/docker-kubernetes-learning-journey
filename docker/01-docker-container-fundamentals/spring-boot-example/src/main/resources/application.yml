@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: docker-intro-api
+
+app:
+  name: ${APP_NAME:Docker Intro API}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
